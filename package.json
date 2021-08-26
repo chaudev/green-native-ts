@@ -1,0 +1,30 @@
+{
+  "name": "green-native-ts",
+  "version": "1.0.1",
+  "description": "This is a library for React Native code (TypeScript)",
+  "main": "index.tsx",
+  "dependencies": {
+    "react-native-vector-icons": "^8.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "npm i green-native-ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chaudev/green-native-ts.git"
+  },
+  "keywords": [
+    "greennative",
+    "green-native",
+    "baochau9xx",
+    "react-native",
+    "checkbox"
+  ],
+  "author": "NGUYEN PHUC BAO CHAU (baochau9xx, chaudev)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chaudev/green-native-ts/issues"
+  },
+  "homepage": "https://github.com/chaudev/green-native-ts#readme"
+}
