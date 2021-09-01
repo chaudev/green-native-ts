@@ -12,47 +12,68 @@ Require
 npx react-native-link
 ```
 
-### Colors
+### AnimationButton
+
+#### Simple buttom
 
 ```javascript
-import { Colors } from "green-native";
+import { AnimationButton } from "green-native-ts";
 
-<Text style={{ color: Colors.green, fontSize: 18 }}>Green Native</Text>;
+<AnimationButton
+  animation="zoom-out"
+  text="Green Native"
+  background="red"
+  paddingHorizontal={15}
+  paddingVertical={10}
+  radius={6}
+/>;
+```
+
+#### Using CustomComponents
+
+```javascript
+import { AnimationButton } from "green-native-ts";
+
+<AnimationButton
+  animation="zoom-in"
+  CustomComponents={() => (
+    <View
+      style={{
+        padding: 10,
+        backgroundColor: "red",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <Text style={{ fontSize: 18 }}>Green Native</Text>
+    </View>
+  )}
+/>;
 ```
 
 #### Available props
 
-| Name         | Color            |
-| ------------ | ---------------- |
-| transparent  | rgba(0,0,0,0)    |
-| trans05      | rgba(0,0,0,0.05) |
-| trans50      | rgba(0,0,0,0.5)  |
-| primaryColor | #28C953          |
-| red          | #F44336          |
-| blue         | #2196F3          |
-| pink         | #E91E63          |
-| orange       | #FF5722          |
-| blueGrey     | #607D8B          |
-| purple       | #9C27B0          |
-| blueGrey     | #607D8B          |
-| borderColor  | #ECEFF1          |
+| Name              | Type                       | Default                   |
+| ----------------- | -------------------------- | ------------------------- |
+| text              | string: text center button | none                      |
+| color             | color                      | #fff                      |
+| width             | number                     | none                      |
+| height            | number                     | none                      |
+| fontSize          | number                     | 16                        |
+| background        | color                      | #28C953                   |
+| radius            | number                     | 0                         |
+| isBold            | boolean                    | false                     |
+| paddingHorizontal | number                     | 5                         |
+| paddingVertical   | number                     | 5                         |
+| fontFamily        | string: font name          | none                      |
+| animation         | string: zoom-in, zoom-out  | zoom-in                   |
+| onPress           | function                   | console.log(Green Native) |
+| CustomComponents  | Element                    | none                      |
 
-Light or dark colors can be used
-
-```javascript
-<Text style={{ color: Colors.orangeDark, fontSize: 18 }}>Green Native</Text>
-```
-
-Social network color
+### Icon
 
 ```javascript
-<Text style={{ color: Colors.youtube, fontSize: 18 }}>Green Native</Text>
-```
-
-### Colors
-
-```javascript
-import { Icon } from "green-native";
+import { Icon } from "green-native-ts";
 
 <Icon type="Ionicons" name="camera" size={30} color={Colors.purpleDark} />;
 ```
@@ -70,46 +91,10 @@ Icons can be found at: https://oblador.github.io/react-native-vector-icons
 | size  | number                            | 18          |
 | color | color                             | #28C953     |
 
-### Button
-
-```javascript
-import { Colors, Button } from "green-native";
-
-<Button
-  isOutLine={true}
-  background={Colors.orange}
-  boder={1}
-  boderColor={Colors.green}
-  radius={4}
-  onPress={() => {
-    console.log("This is handle");
-  }}
-/>;
-```
-
-#### Available props
-
-| Name       | Type                       | Default                   |
-| ---------- | -------------------------- | ------------------------- |
-| text       | string: text center button | none                      |
-| width      | number                     | none                      |
-| height     | number                     | none                      |
-| background | color                      | #28C953                   |
-| textColor  | color                      | #fff                      |
-| textBold   | boolean                    | false                     |
-| fontSize   | number                     | 14                        |
-| radius     | number                     | 0                         |
-| boder      | number                     | 0                         |
-| boderColor | color                      | #28C953                   |
-| isOutLine  | boolean                    | false                     |
-| isDark     | boolean                    | false                     |
-| isLight    | boolean                    | false                     |
-| onPress    | function                   | console.log(Green Native) |
-
 ### CheckBox
 
 ```javascript
-import { Colors, CheckBox } from "green-native";
+import { Colors, CheckBox } from "green-native-ts";
 
 const GreenMaster = () => {
   const [status, setStatus] = React.useState(false);
@@ -148,10 +133,83 @@ const GreenMaster = () => {
 | onPress          | function                          | console.log(Green Native) |
 | activeOpacity    | number                            | 0.5                       |
 
+### Colors
+
+```javascript
+import { Colors } from "green-native-ts";
+
+<Text style={{ color: Colors.green, fontSize: 18 }}>Green Native</Text>;
+```
+
+#### Available props
+
+| Name         | Color            |
+| ------------ | ---------------- |
+| transparent  | rgba(0,0,0,0)    |
+| trans05      | rgba(0,0,0,0.05) |
+| trans50      | rgba(0,0,0,0.5)  |
+| primaryColor | #28C953          |
+| red          | #F44336          |
+| blue         | #2196F3          |
+| pink         | #E91E63          |
+| orange       | #FF5722          |
+| blueGrey     | #607D8B          |
+| purple       | #9C27B0          |
+| blueGrey     | #607D8B          |
+| borderColor  | #ECEFF1          |
+
+Light or dark colors can be used
+
+```javascript
+<Text style={{ color: Colors.orangeDark, fontSize: 18 }}>Green Native</Text>
+```
+
+Social network color
+
+```javascript
+<Text style={{ color: Colors.youtube, fontSize: 18 }}>Green Native</Text>
+```
+
+### Button
+
+```javascript
+import { Colors, Button } from "green-native-ts";
+
+<Button
+  isOutLine={true}
+  background={Colors.orange}
+  boder={1}
+  boderColor={Colors.green}
+  radius={4}
+  onPress={() => {
+    console.log("This is handle");
+  }}
+/>;
+```
+
+#### Available props
+
+| Name       | Type                       | Default                   |
+| ---------- | -------------------------- | ------------------------- |
+| text       | string: text center button | none                      |
+| width      | number                     | none                      |
+| height     | number                     | none                      |
+| background | color                      | #28C953                   |
+| textColor  | color                      | #fff                      |
+| textBold   | boolean                    | false                     |
+| fontSize   | number                     | 14                        |
+| radius     | number                     | 0                         |
+| boder      | number                     | 0                         |
+| boderColor | color                      | #28C953                   |
+| isOutLine  | boolean                    | false                     |
+| isDark     | boolean                    | false                     |
+| isLight    | boolean                    | false                     |
+| onPress    | function                   | console.log(Green Native) |
+
 ### Spinner
 
 ```javascript
-import { Colors, Spinner } from "green-native";
+import { Colors, Spinner } from "green-native-ts";
 
 <Spinner
   type="full"
@@ -175,7 +233,7 @@ import { Colors, Spinner } from "green-native";
 ### ButtonIcon
 
 ```javascript
-import { Colors, ButtonIcon } from "green-native";
+import { Colors, ButtonIcon } from "green-native-ts";
 
 <ButtonIcon
   text="This is Green Native"
@@ -207,7 +265,7 @@ import { Colors, ButtonIcon } from "green-native";
 ### ErrorNotification
 
 ```javascript
-import { Colors, ErrorNotification } from "green-native";
+import { Colors, ErrorNotification } from "green-native-ts";
 
 <ErrorNotification
   text="Please enter password"
@@ -232,7 +290,7 @@ import { Colors, ErrorNotification } from "green-native";
 #### useKeyboard
 
 ```javascript
-import { useKeyboard } from "green-native";
+import { useKeyboard } from "green-native-ts";
 
 const keyboard = useKeyboard(); // true, false
 ```
@@ -242,7 +300,7 @@ const keyboard = useKeyboard(); // true, false
 #### screenHeight, screenWidth
 
 ```javascript
-import { screenHeight, screenWidth } from "green-native";
+import { screenHeight, screenWidth } from "green-native-ts";
 
 <View style={{ width: screenWidth, height: screenHeight }} />;
 ```
@@ -250,7 +308,7 @@ import { screenHeight, screenWidth } from "green-native";
 #### windowHeight, windowWidth
 
 ```javascript
-import { windowHeight, windowWidth } from "green-native";
+import { windowHeight, windowWidth } from "green-native-ts";
 
 <View style={{ width: windowWidth, height: windowHeight }} />;
 ```
@@ -279,4 +337,4 @@ linked & facebook: baochau9xx
 
 ### Keyword
 
-baochau9xx, green, green-native, green native, react-native, native, baochau
+baochau9xx, green, green-native-ts, green native, react-native, native, baochau

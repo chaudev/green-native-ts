@@ -12,6 +12,7 @@ import { Button } from "./src/components/Button";
 import { CheckBox } from "./src/components/CheckBox";
 import { Spinner } from "./src/components/Spinner";
 import { ButtonIcon } from "./src/components/ButtonIcon";
+import { AnimationButton } from "./src/components/AnimationButton";
 import {
   saveToStorage,
   getFromStorage,
@@ -34,6 +35,7 @@ export {
   Icon,
   Button,
   CheckBox,
+  AnimationButton,
   saveToStorage,
   getFromStorage,
   is18x9,
