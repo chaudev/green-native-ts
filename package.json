@@ -1,6 +1,6 @@
 {
   "name": "green-native-ts",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "This is a library for React Native code (TypeScript)",
   "main": "index.tsx",
   "dependencies": {
@@ -19,7 +19,8 @@
     "green-native",
     "baochau9xx",
     "react-native",
-    "checkbox"
+    "checkbox",
+    "dovuihainao"
   ],
   "author": "NGUYEN PHUC BAO CHAU (baochau9xx, chaudev)",
   "license": "ISC",
