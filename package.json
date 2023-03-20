@@ -1,6 +1,6 @@
 {
   "name": "green-native-ts",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "This is a library for React Native code (TypeScript)",
   "main": "index.tsx",
   "dependencies": {

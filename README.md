@@ -327,14 +327,16 @@ import { windowHeight, windowWidth } from "green-native-ts";
 | PhoneCall      | function | String: phone number  | Open phone call |
 | parseMoney     | function | String, number: 69000 | 69.000          |
 
-### END OF VERSION 1.0.0
-
-### About
+## Contact
 
 NGUYEN PHUC BAO CHAU
 
-linked & facebook: baochau9xx
+- Website: https://ischau.org
+- Website 2: https://dovuihainao.com
+- Telegram: https://t.me/baochau9xx
+- Facebook: https://facebook.com/baochau9xx
+- Mail: chau.02it@gmail.com
 
 ### Keyword
 
-baochau9xx, green, green-native-ts, green native, react-native, native, baochau
+baochau9xx, green, green-native-ts, green native, react-native, native, baochau, dovuihainao
