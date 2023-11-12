@@ -13,7 +13,7 @@ const saveToStorage = async (name: string, value: object): Promise<void> => {
 // Get from AsyncStorage
 const getFromStorage = async (name: string): Promise<any> => {
   try {
-    var value = await AsyncStorage.getItem(name);
+    var value: string = await AsyncStorage.getItem(name);
     if (value !== null || value !== undefined) {
       return value;
     } else {
@@ -56,9 +56,14 @@ const isIOS = (): boolean => {
   return Platform.OS === "ios" ? true : false;
 };
 
+// Check Android phone
+const isAndroid = (): boolean => {
+  return Platform.OS === "android" ? true : false;
+};
+
 // Check IOS phone
 const isNull = (value: any): boolean => {
-  if (value == "" || value == null || value == undefined || value == NaN) {
+  if (value == "" || value == null || value == undefined) {
     return true;
   } else {
     return false;
@@ -77,13 +82,12 @@ const is18x9 = (): boolean => {
 };
 
 const PhoneCall = (phoneNumber: string): void => {
-  console.log(phoneNumber);
   isIOS()
     ? Linking.openURL(`telprompt:${phoneNumber}`)
     : Linking.openURL(`tel:${phoneNumber}`);
 };
 
-const parseMoney = (value: string): any => {
+const parseMoney = (value: string): string => {
   var temp: string = value + "";
   var response: string = "";
   var flag: number = 0;
@@ -106,6 +110,7 @@ export {
   getFromStorage,
   randomNonRepeat,
   isIOS,
+  isAndroid,
   isNull,
   is18x9,
   PhoneCall,

@@ -1,55 +1,36 @@
-import React, { useState } from "react";
+// Last modified 12-11-2013 by Chaos Nguyen
+// https://thatthuvi.com
+
+import React from "react";
 import { TouchableOpacity, Text } from "react-native";
 import { Icon } from "../Icon";
 import { Colors } from "../../styles/colors";
 
-export const CheckBox = ({
-  checked,
-  text,
-  iconType,
-  iconName,
-  iconCheckedName,
-  iconColor,
-  iconCheckedColor,
-  iconSize,
-  textSize,
-  textColor,
-  onPress,
-  activeOpacity,
-}: {
-  checked: boolean;
-  text: string;
-  iconType: string;
-  iconName: string;
-  iconCheckedName: string;
-  iconColor: string;
-  iconCheckedColor: string;
-  iconSize: number;
-  textSize: number;
-  textColor: string;
-  onPress: any;
-  activeOpacity: number;
-}): JSX.Element => {
+export const CheckBox = (props: TGreenCheckbox): JSX.Element => {
+  const { iconSize, textSize, textColor, onPress, activeOpacity } = props;
+
+  const { text, iconType, checked, iconName } = props;
+
+  const { iconCheckedName, iconColor, iconCheckedColor } = props;
+
+  const checkedName = !checked
+    ? iconName || "checkbox-blank-outline"
+    : iconCheckedName || "checkbox-marked";
+
+  const thisColor = !checked
+    ? iconColor || Colors.blueGrey
+    : iconCheckedColor || Colors.primaryColor;
+
   return (
     <TouchableOpacity
-      activeOpacity={activeOpacity || 0.5}
-      onPress={() => {
-        onPress !== undefined ? onPress() : console.log("Green Native");
-      }}
+      activeOpacity={activeOpacity || 0.7}
+      onPress={() => onPress && onPress()}
       style={{ flexDirection: "row", alignItems: "center" }}
     >
       <Icon
-        type={iconType || "MaterialCommunityIcons"}
-        name={
-          !checked
-            ? iconName || "checkbox-blank-outline"
-            : iconCheckedName || "checkbox-marked"
-        }
-        color={
-          !checked
-            ? iconColor || Colors.blueGrey
-            : iconCheckedColor || Colors.primaryColor
-        }
+        type={iconType ? iconType : "materialcommunityicons"}
+        name={checkedName}
+        color={thisColor}
         size={iconSize || 30}
       />
       <Text
