@@ -1,4 +1,4 @@
-// Last modified 12-11-2013 by Chaos Nguyen
+// Last modified 12-12-2013 by Chau Nguyen
 // https://thatthuvi.com
 
 import React from "react";
@@ -24,39 +24,39 @@ const Icon = (props: TGreenIcon) => {
     style: style ? style : {},
   };
 
-  if (type === "antdesign") {
+  if (type == "antdesign" || type == "AntDesign") {
     return <AntDesign {...IconProps} />;
   }
 
-  if (type === "fontawesome") {
+  if (type == "fontawesome" || type == "FontAwesome") {
     return <FontAwesome {...IconProps} />;
   }
 
-  if (type === "fontawesome5") {
+  if (type == "fontawesome5" || type == "FontAwesome5") {
     return <FontAwesome5 {...IconProps} />;
   }
 
-  if (type === "fontisto") {
+  if (type == "fontisto" || type == "Fontisto") {
     return <Fontisto {...IconProps} />;
   }
 
-  if (type === "ionicons") {
+  if (type == "ionicons" || type == "Ionicons") {
     return <Ionicons {...IconProps} />;
   }
 
-  if (type === "materialicons") {
+  if (type == "materialicons" || type == "MaterialIcons") {
     return <MaterialIcons {...IconProps} />;
   }
 
-  if (type === "octicons") {
+  if (type == "octicons" || type == "Octicons") {
     return <Octicons {...IconProps} />;
   }
 
-  if (type === "materialcommunityicons") {
+  if (type == "materialcommunityicons" || type == "MaterialCommunityIcons") {
     return <MaterialCommunityIcons {...IconProps} />;
   }
 
-  if (type === "entypo") {
+  if (type == "entypo" || type == "Entypo") {
     return <Entypo {...IconProps} />;
   }
 

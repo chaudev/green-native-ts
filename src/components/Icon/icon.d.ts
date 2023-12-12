@@ -1,4 +1,4 @@
-// Last modified 12-11-2013 by Chaos Nguyen
+// Last modified 12-12-2013 by Chau Nguyen
 // https://thatthuvi.com
 
 import { GreenTextStyle } from "../../types/primary";
@@ -13,7 +13,15 @@ export type TGreenIcon = {
     | "fontisto"
     | "antdesign"
     | "fontawesome"
-    | "fontawesome5";
+    | "fontawesome5"
+    | "AntDesign"
+    | "Octicons"
+    | "MaterialIcons"
+    | "Ionicons"
+    | "Fontisto"
+    | "FontAwesome5"
+    | "FontAwesome"
+    | "MaterialCommunityIcons";
   name?: string;
   size?: number;
   color?: "red" | "green" | "blue" | "yellow" | string;

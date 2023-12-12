@@ -1,4 +1,4 @@
-// Last modified 12-11-2013 by Chaos Nguyen
+// Last modified 12-12-2013 by Chaos Nguyen
 // https://thatthuvi.com
 
 type TGreenCheckbox = {
@@ -13,7 +13,15 @@ type TGreenCheckbox = {
     | "fontisto"
     | "antdesign"
     | "fontawesome"
-    | "fontawesome5";
+    | "fontawesome5"
+    | "AntDesign"
+    | "Octicons"
+    | "MaterialIcons"
+    | "Ionicons"
+    | "Fontisto"
+    | "FontAwesome5"
+    | "FontAwesome"
+    | "MaterialCommunityIcons";
   iconName?: string;
   iconCheckedName?: string;
   iconColor?: string;
